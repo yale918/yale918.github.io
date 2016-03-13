@@ -1,0 +1,29 @@
+
+---------------------------------------------------------------------------------
+1. $npm install http-server -g    // https://www.npmjs.com/package/http-server
+2. $http-server 
+3. $git clone https://github.com/yale918/yale918.github.io.git
+4. $git add --all / git commit -m "string" / git push
+5. $vim index.html
+
+
+
+-------------------------------
+.vimrc 設定
+
+et nocp
+set nocompatible
+set backspace=2
+set term=cons25
+
+
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+
+-----------------------------------

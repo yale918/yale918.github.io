@@ -1,0 +1,7 @@
+alias gs="git status"
+alias gitf="cd ~/coding/yale918.github.io"
+alias realias="source ~/.bash_aliases"
+alias g1="git add --all"
+alias g2="git commit -m '..'"
+alias g3="git push origin master"
+alias cpsetting="sudo cp ~/.vimrc ~/coding/yale918.github.io/dotfile/.vimrc | cp ~/.tmux.conf ~/coding/yale918.github.io/dotfile/.tmux.conf | cp ~/.bash_aliases ~/coding/yale918.github.io/dotfile/.bash_aliases"
