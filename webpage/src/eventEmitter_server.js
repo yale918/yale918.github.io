@@ -15,7 +15,8 @@ var server = net.createServer(function(client){
 	id = client.remoteAddress+":"+client.remotePort;
 	console.log("connection ID= "+id);
 
-		channel.emit('join' ,id ,client);
+	channel.emit('join' ,id ,client);
+	
 	client.on('data',function(data){
 		data = data.toString();
 		console.log(id+":"+data);
