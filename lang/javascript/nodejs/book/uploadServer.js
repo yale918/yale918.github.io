@@ -7,7 +7,7 @@ var formidable = require('formidable'),
 
 
 var items = [];
-var port = 8088;
+var port = 8080;
 
 var server = http.createServer(function(req,res){
 	switch(req.method){
