@@ -1,0 +1,37 @@
+<script src="./d3/d3.min.js"> </script>
+
+<svg width="50" height="50">
+	<circle cx="25" cy="25" r="25" fill="purple /"> 
+</svg>
+
+<script>
+
+var body = d3.select("body");
+var svg = body.append("svg").attr("height", 50)
+							.attr("width", 50);
+var circle = svg.append("circle").attr("cx", 25)
+								 .attr("cy", 25)
+								 .attr("r",25)
+								 .style("fill", "blue");
+
+
+var circleRadii = [40, 20, 10];
+
+var svg = d3.select("body").append("svg")
+									.attr("width", 200)
+									.attr("height", 200)
+var circles=svg.selectAll("circle")
+			  .data(circleRadii)
+  			  .enter()
+			  .append("circle")
+var clrcleAttr = circles.attr("cx", 100)
+						.attr("cy", 100)
+						.attr("r", function (d){ return d; })
+						.style("fill", function(d) {
+							var color;
+							if(d==40) return "red";
+							if(d==20) return "green";
+							if(d==10) return "black";
+						});
+									
+</script>

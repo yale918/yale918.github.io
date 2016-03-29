@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset ="utf-8">
+
+<!Sample for src a file>
+<script src = "b.js"></script>
+<div>
+<button onclick="test()"> hit me!! </button>
+</div>
+
+<!sample for hello world>
+<script src = "./d3/d3.min.js"></script>
+<script>
+d3.select("body")
+  .append("span")
+  .text("hello world");
+</script>
+
+<!sample for a circle>
+<script>
+d3.select("body")
+  .append("svg")
+  .attr("width",50)
+  .attr("height",50)
+  .append("circle")
+  .attr("cx",25)
+  .attr("cy",25)
+  .attr("r",25)
+  .style("fill","red")
+
+var bodySelection = d3.select("body");
+
+var svgSelection = bodySelection.append("svg")
+  								 .attr("width", 50)
+  								 .attr("height", 50);
+
+var circleSelection = svgSelection.append("circle")
+ 								   .attr("cx", 25)
+  								   .attr("cy", 25)
+  								   .attr("r", 25)
+								   .style("fill", "purple");
+
+</script>
+
