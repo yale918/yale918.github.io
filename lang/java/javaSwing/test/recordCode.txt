@@ -1,0 +1,29 @@
+
+
+//¦h­Ópanel ªþ¥[
+ /* 
+        JPanel jpBottom = new JPanel();  // new 3 jpanel
+        JPanel jpLeft = new JPanel();
+        JPanel jpRight = new JPanel();
+        
+        jpLeft.setBackground(Color.RED); // set panel bgroundcolor
+        jpRight.setBackground(Color.YELLOW);
+        jpBottom.setBackground(Color.BLUE);
+
+        jpLeft.add(new JButton("Btn1")); //add button into panel
+        jpLeft.add(new JButton("Btn2"));
+        jpRight.add(new JButton("Btn3"));
+        jpRight.add(new JButton("Btn4"));
+        jpRight.add(new JButton("Btn5"));
+       
+        
+        jpBottom.add(jpLeft); // jpLeft attach  jpBottom
+        jpBottom.add(jpRight); // jpRight attach  jpBottom
+        
+        getContentPane().add(jpBottom); // container attach JFrame
+        
+        Dimension dim = getToolkit().getScreenSize(); // get size
+        setSize((int)dim.getWidth()/5, (int)dim.getHeight()/5); 
+        setLocation(dim.width/2-getWidth()/2, dim.height/2-getHeight()/2);
+
+        */
