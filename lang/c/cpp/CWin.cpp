@@ -56,6 +56,8 @@ void showLargest(CWin win){
 
 }
 
+int CWin::number = 0;
+
 int main(){
     CWin win[3];
     win[0].set_data('A',60,70);
@@ -63,8 +65,16 @@ int main(){
 
     showLargest( findLargest(win,3) );
     cout<<"we created "<< CWin::number <<" Cwin objects"<<endl;
-    return 0;
+    cout<<"program finished"<<endl; 
 
+    //int stop;
+    //cin>>stop;
+    
+    cout<<endl<<"Hello Baba"<<endl;
+    
+    system("pause");
+    return 0;
+    
 }
 
 

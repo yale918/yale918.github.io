@@ -1,8 +1,8 @@
-//#include<windows.h>
-LRESULT CALLBACK wndProc(HWND, UINT, WPARAM, LPARAM);
+#include<windows.h>
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 /*  WinMain(), entry point  */
-int WINAPI WINMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine, int iCmdShow){
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine, int iCmdShow){
     static char szAppName[] = "winhello";
     HWND        hwnd;
     MSG         msg;
@@ -10,9 +10,9 @@ int WINAPI WINMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine
 
     //  Fill in WNDCLASSEX struct members
     wndclass.cbSize         = sizeof(wndclass);
-    wndclass.style          = CS_HREDRAW | CS_VERDRAW;
+    wndclass.style          = CS_HREDRAW | CS_VREDRAW;
     wndclass.lpfnWndProc    = WndProc;
-    wndclass.cbClasExtra    = 0;
+    wndclass.cbClsExtra     = 0;
     wndclass.cbWndExtra     = 0;
     wndclass.hInstance      = hInstance;
     wndclass.hIcon          = LoadIcon(NULL, IDI_APPLICATION);
@@ -63,7 +63,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam){
     case WM_DESTROY:
         /*  Window has been destroyed, so exit cleanly  */
         PostQuitMessage(0);
-        reutrn 0;
+        return 0;
     }
     /*  Send any messages we don't handle to default window procedure   */
 
