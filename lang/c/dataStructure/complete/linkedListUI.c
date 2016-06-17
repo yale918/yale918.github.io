@@ -4,8 +4,8 @@
 
 struct list{
     int name;
-    struct list* next;
-};
+    struct list*i next;
+}
 typedef struct list node;
 
 void UI();

@@ -11,6 +11,7 @@ server.on("request", function(req,res){
 	if(pathname=="/"){ writeFile("./index.html",res); }
 	else if(pathname=="/page"){ writeFile("./page/p1.html",res)}
 	else if(pathname=="/download"){writeFile("./page/download.html",res)}
+
 });
 
 
@@ -22,9 +23,12 @@ function writeFile(filename,res){
 		res.end(data);
 		//console.log(data.toString());
 	 
-	});
+
+});
+
 
 }
+
 server.listen(port, function(){
     console.log("[*]server started on port: "+port);
 });
