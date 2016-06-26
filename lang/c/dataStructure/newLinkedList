@@ -1,0 +1,151 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct ListNode{
+    //int number;
+    //char id[10];
+    //char name[10];
+    char name;
+    struct node *next;
+
+}Node;
+
+int main(){
+    //int count=0;
+    //struct node data[20];
+    int selection=0;
+
+    Node *head = NULL;
+    Node *current  = NULL;;
+    Node *previous  = NULL;;
+
+    while(1){
+        printf("1)create list  2)Show list  3)End Function\n");
+        scanf("%d", &selection);
+        switch(selection){
+            case 1:
+                while(1){
+                    printf("input node name: ");
+                    scanf("%c", current -> name);
+                    printf("%c", current -> name);
+                    /*
+                    if(current->name == 'N') break;
+
+                    current = (Node *) malloc(sizeof(Node));
+
+                    current -> next = NULL;
+
+                    if(head!=NULL){ previous -> next = current; }
+                    else    {   head = current; previous=head;  }
+                    */
+                }
+                /*
+                Node *p = head;
+                do{
+                    printf("%c -> ", p->name);
+                    p = p->next;
+                }while(p!=NULL);
+                */
+                break;
+            case 2:
+                break;
+            case 3:{    printf("user terminated\n");    return 0;}
+
+            default:
+                return 0;
+        }
+    }
+
+
+
+
+
+   /*
+    while(1){
+        printf("1)Insert Node  2)Show Node  3)End Function\n");
+        scanf("%d", &selection);
+        switch(selection){
+            case 1:
+                printf("input id name: ");
+                current = (Node *) malloc(sizeof(Node));
+
+                scanf("%c", current -> name);
+                printf("%c", current -> name);
+                current -> next = NULL;
+                if(head == NULL){   head = current;}
+
+                break;
+            case 2:
+                break;
+            case 3:{    printf("user terminated\n");    return 0;}
+
+            default:
+                return 0;
+        }
+    }
+
+    */
+
+
+
+
+
+
+
+
+
+    /*
+    if(current -> next == NULL){
+        printf("yes!");
+    }
+    */
+
+
+
+    //printf("%d", selection);
+
+
+
+    /*
+    while(1){
+        printf("1)Input Data  2)Show Data  3)End Function\n");
+        scanf("%d", &selection);
+
+        switch(selection)
+        {
+            case 1:
+                data[count].number = count+1;
+                printf("Data[%d] please input id: ", count+1);
+                scanf("%s", data[count].id);
+                //gets(data[count].id);
+                //puts(data[count].id);
+                printf("Data[%d] please input name: ", count+1);
+                scanf("%s", data[count].name);
+                printf("\n");
+                count++;
+                break;
+
+            case 2:
+                for (int i=0; i<count; i++){
+                    printf("data[i].number= %d\n", data[i].number);
+                    printf("data[i].id    = %s\n", data[i].id);
+                    printf("data[i].name  = %s\n", data[i].name);
+                    printf("\n");
+                }
+
+                break;
+
+            case 3:
+                return 0;
+            default:
+               printf("default");
+
+
+
+
+        }
+
+    }
+   */
+
+
+}
