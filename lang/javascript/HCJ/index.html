@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8"/> 
+<style>
+.reveal * {display:none;}
+.reveal *.handle{display:block;}
+
+#clock {
+	font: bold 24pt sans;
+	background: #ddf;
+	padding: 10px;
+	border: solid black 2px;
+	border-radius: 10px;
+}
+</style>
+<title>	reveal </title>
+<script>	
+
+function displayTime(){
+	var elt = document.getElementById("clock")
+	var now = new Date();
+	elt.innerHTML = now.toLocaleTimeString();
+	setTimeout(displayTime,1000);
+};
+function reveal(){
+	var elements = document.getElementsByClassName("reveal");
+	for (var i=0;i<elements.length;i++){
+		var elt = elements[i];
+		var title = elt.getElementsByClassName("handle")[0];
+		addRevealHandler(title, elt);
+	}
+	function addRevealHandler(title, elt){
+		title.onclick = function(){
+			if(elt.className == "reveal")	elt.className = "revealed";
+			else if (elt.className == "revealed") elt.className = "reveal";
+		}
+	}
+
+};
+
+window.onload = function(){
+	displayTime();
+	reveal();
+};
+
+</script>
+</head>
+
+
+
+<body>
+
+
+<br>
+<span id="clock"></span>
+<br>
+<br>
+<div class="reveal">
+<h1 class="handle">Javascript:The Definitive Guide Examples</h1>
+<a href='./digitalClock.html' target="_blank" >digital clock</a>
+<br><br>
+<a href="javascript:new Date().toLocaleTimeString();" target="_blank"> Javascript URL:time</a>
+<br><br>
+<a href="javascript:alert(new Date().toLocaleTimeString());"> Javascript URL:alert</a>
+</div>
+
+<body>
+<div class="reveal">
+<h1 class="handle">Hot Link</h1>
+<p>This paragraph is hidden. It appers when you click on the title.</p>
+</div>
+
+
+<div class="reveal">
+<h1 class="handle">Javascript</h1>
+<p>This is another hidden paragraph.</p>
+</div>
+<div class="reveal">
+<h1 class="handle">Python</h1>
+<ul>
+<p><li>Django setting</li></p>
+<p><li>Django page build</li></p>
+<p><li>Django deploy Heroku</li></p>
+</ul>
+</div>
+<div class="reveal">
+<h1 class="handle">NodeJS</h1>
+<p>This is another hidden paragraph.</p>
+</div>
+<div class="reveal">
+<h1 class="handle">JAVA</h1>
+<p>This is another hidden paragraph.</p>
+</div>
+
+</body>
+</html>

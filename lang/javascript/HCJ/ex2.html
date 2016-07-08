@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="big5"/>
+<title>	open tab </title>
+<script>	
+var winID = null;
+function openWindow(){
+	winID = window.open("ex1.html", "JavaScript")
+}
+function closeWindow(){
+	if(winID && winID.open && !winID.closed)
+		winID.close();
+}
+function changeURL(newURL){
+	if(winID&& winID.open && !winID.closed)
+		winID.location.href = newURL;
+}
+</script>
+</head>
+
+
+
+<body onload="closeWindow()">
+<h2>視窗的開啟與關閉</h2>
+<hr/>
+
+<form>
+<input type="button" onclick="openWindow()" value="開啟視窗">
+<input type="button" onclick="closeWindow()" value="關閉視窗">
+<input type="button" onclick="changeURL('ex1.html')" value="顯示新url">
+<input type="button" onclick="changeURL('ex2.html')" value="重設url">
+</form>
+</body>
+</html>
