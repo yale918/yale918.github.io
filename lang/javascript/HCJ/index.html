@@ -15,6 +15,8 @@
 }
 </style>
 <title>	reveal </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>	
 
 function displayTime(){
@@ -42,7 +44,48 @@ function reveal(){
 window.onload = function(){
 	displayTime();
 	reveal();
+	//document.getElementById("clock").addEventListener("mouseover",myFunc1);
+	document.getElementById("button1").addEventListener("click",myFunc2);
+	document.getElementById("toTop").addEventListener("click",toTop);
+	document.getElementById("toDown").addEventListener("click",toDown);
+	//document.getElementById("button3").addEventListener("click",myFunc4);
+	//dialogs();
+	detectPlatformInfo();
+
 };
+
+
+//function myFunc1(){	window.alert("touch");	}
+function myFunc2(){	
+	var w = window.open();
+	w.alert("go to digitalClock.html");
+	w.location = "./digitalClock.html";
+}
+function toDown(){	location = "#down"	}
+function toTop(){	location = "#top"	}
+function detectPlatformInfo(){
+	document.getElementById("platform").innerHTML = "platform: "+navigator.platform;
+	document.getElementById("browser").innerHTML = "Name is " + navigator.appName + ". Code name is " + navigator.appCodeName;
+}
+function dialogs(){
+	do{
+		var name = prompt("What is your name?");
+		var correct = confirm("You entered '"+name+"'.\n")
+	} while(!correct)
+	alert("Hello, "+name);
+}
+/*
+var browser = (function(){
+	var s = navigator.userAgent.toLowerCase();
+	var match = /(webkit)[ \/]([\w.]+)/.exec(s) ||
+	/(opera)(?:.*version)?[ \/]([\w.]+)/.exec(s) ||
+	/(msie) ([\w.]+)/.exec(s) ||
+	!/compatible/.test(s) && /(mozilla)(?:.*? rv:([\w.]+)/.exec(s) ||
+	[];
+	return { name: match[1] || "", version: match[2] || "0" };
+	}());
+*/
+
 
 </script>
 </head>
@@ -50,11 +93,20 @@ window.onload = function(){
 
 
 <body>
+<a id="top"/>
 
 
+<p id="platform"> <p/>
+<p id="browser"> <p/>
+
+<input id="button1" type="submit" value="digitalClock"></input>
+<input id="toDown" type="submit" value="toDown"/>
+<br>
 <br>
 <span id="clock"></span>
 <br>
+
+
 <br>
 <div class="reveal">
 <h1 class="handle">Javascript:The Definitive Guide Examples</h1>
@@ -65,7 +117,6 @@ window.onload = function(){
 <a href="javascript:alert(new Date().toLocaleTimeString());"> Javascript URL:alert</a>
 </div>
 
-<body>
 <div class="reveal">
 <h1 class="handle">Hot Link</h1>
 <p>This paragraph is hidden. It appers when you click on the title.</p>
@@ -92,6 +143,59 @@ window.onload = function(){
 <h1 class="handle">JAVA</h1>
 <p>This is another hidden paragraph.</p>
 </div>
+
+<div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div>
+<div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div><div>
+	<h1>JAVA</h1>
+</div>
+
+<a id="down"/>
+
+<input id="toTop" type="submit" value="toTop">
+
 
 </body>
 </html>
