@@ -14,6 +14,7 @@ var cache = {};
 var port = 1111;
 
 function send404(response){
+	
 //console.log("in 404");
 	response.writeHead(404, {'Conten-Type': 'text/plain'});
 	response.write('Error 404: resource not found.');
@@ -54,8 +55,7 @@ function onRequest(request,response){//建立HTTP伺服器，使用暱名函式�
 	var filePath = false;
 console.log("port "+port+" requested!");
 	if(request.url == '/'){
-		filePath = 'test1.html';
-		//filePath = 'websocket_client.html';						//決定預設提供的HTML檔案
+		filePath = 'websocket_client.html';						//決定預設提供的HTML檔案
 //console.log("[*]filePath: "+ filePath)
 	}else{
 		filePath =  request.url;					
@@ -70,8 +70,6 @@ var server = http.createServer(onRequest);
 server.listen(port, function(){
 	console.log("[*]node_server(websocket) listening on port "+port);
 });
-
-
 
 
 wsServer = new websocket_server({
